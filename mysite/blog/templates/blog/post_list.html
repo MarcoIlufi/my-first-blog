@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> Blog de Marco </title>
-    </head>
-    <h1>
-        Un título
-    </h1>
-    <body>
-        <p>Hola mundo!</p>
-        <p>Funciona!</p>
-    </body>
-</html>
+    <html>
+        <head>
+            <title>Intento de Blog</title>
+        </head>
+        <body>
+            <div>
+                <h1><a href="">Intento de Blog de Marco</a></h1>
+            </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{post.published_date}}</p>
+                <h1><a href="">{{post.title}}</a></h1>
+                <p>{{post.text|linebreaksbr}}</p>
+            </div>
+            {{post}}
+        {% endfor %}
 
+        </body>
+    </html>
 
